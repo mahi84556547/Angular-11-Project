@@ -1,0 +1,12 @@
+<div class="contain" *ngIf="auth.isLoggeedIn()" >
+  <mat-toolbar color="primary"  class="tobar" >
+    <div class="space"></div>
+    <span class="material-icons"> eco</span>
+    <span class="text" routerLink= "/home">Angular 11 - Crud Project</span>
+    <div class="space"></div>
+    <button mat-button mat-icon-button routerLink="/login">
+      <mat-icon (click)="signOut()" class="login-icon" *ngIf="auth.isLoggeedIn()">logout</mat-icon>
+    </button>
+  </mat-toolbar>
+
+</div>

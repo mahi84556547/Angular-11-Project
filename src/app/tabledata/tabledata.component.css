@@ -1,0 +1,54 @@
+::ng-deep .hide-arrow .mat-sort-header-arrow {
+  color:#000;
+}
+
+table {
+    width: 100%;
+  }
+
+.dara{
+    width: 80%;
+    margin-left: 140px;
+    margin-top: 40px;
+}
+.dara .button-row{
+    margin-bottom: 5px;
+}
+.page{
+  width: 100%;
+}
+
+.hide{
+  display: none;
+}
+mat-footer-row mat-footer-cell{
+  justify-content: center;
+  font-style: italic;
+}
+.spinner-wrapper mat-spinner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-left: 8px;
+
+}
+
+.search-form-field{
+  width: 30%;
+  margin-left: 10px;
+  padding: 10px 10px;
+  background-color: #fff;
+  color:rgba(80, 78, 78, 0.925);
+  font-weight: 600;
+  font-size: 15px;
+  border-radius: 5px;
+}
+th.mat-header-cell, td.mat-cell, td.mat-footer-cell{
+  background-color: floralwhite;
+}
+.search-form-field[_ngcontent-rbg-c202]::after{
+  background-color: transparent;
+}
+.mat-form-field{
+  background-color: transparent;
+}

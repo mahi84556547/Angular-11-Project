@@ -1,0 +1,45 @@
+mat-toolbar {
+    height: 64px;
+    z-index: 100;
+    width: 100% !important;
+    margin: 0 !important;
+    background-color: transparent;
+
+}
+mat-toolbar .text{
+    font-size: 29px !important;
+}
+.myFrom{
+    margin: 30px;
+}
+.empControls{
+    width: 90%;
+
+}
+.empControls > * {
+    width: 100%;
+
+}
+.empControls > mat-form-field{
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+.myPadding{
+    padding-bottom: 10px;
+
+}
+mat-radio-group mat-radio-button{
+    margin-left: 5px;
+}
+.buttonRow button{
+    margin: 5px;
+}
+.btn-dialog-close{
+    width: 45px;
+    min-width: 0px !important;
+    height: 40px;
+    padding: 0px !important;
+}
+.fillSpace{
+    flex: 1 1 auto;
+}
