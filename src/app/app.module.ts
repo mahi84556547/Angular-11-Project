@@ -1,3 +1,5 @@
+import { LoggedinGuard } from './Guards/loggedin.guard';
+import { SecurityGuard } from './Guards/security.guard';
 import { DialogService } from './SHARED/dialog.service';
 import { DepartmentService } from './SHARED/department.service';
 import { ServiceService } from './SHARED/service.service';
@@ -34,20 +36,20 @@ import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
     DeleteconfirmComponent,
     LoginComponent,
     PagenotfoundComponent,
-    
-    
+
+
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,HttpClientModule,FormsModule,MaterialModule,
-    ReactiveFormsModule,BrowserAnimationsModule,FlexLayoutModule,
+    AppRoutingModule, HttpClientModule, FormsModule, MaterialModule,
+    ReactiveFormsModule, BrowserAnimationsModule, FlexLayoutModule,
     AngularFireDatabaseModule,
     AngularFireModule.initializeApp(environment.firebaseConfig)
 
    ],
-  providers: [ServiceService,DepartmentService,NotificationService,DialogService],
+  providers: [ServiceService, DepartmentService, NotificationService, DialogService, SecurityGuard, LoggedinGuard],
   bootstrap: [AppComponent],
-  entryComponents: [StudentComponent,MatSnackBar,MatSnackBarConfig]
+  entryComponents: [StudentComponent, MatSnackBar, MatSnackBarConfig]
 
 })
 export class AppModule { }

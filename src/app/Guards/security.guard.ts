@@ -10,14 +10,12 @@ export class SecurityGuard implements CanActivate {
 
 constructor(public service: AuthService, public router: Router){}
 // tslint:disable-next-line: typedef
-async canActivate(route, state: RouterStateSnapshot): Promise<boolean>  {
-  if (this.service.isLoggeedIn()) {
-   return true;
+canActivate(
+  next: ActivatedRouteSnapshot,
+  state: RouterStateSnapshot): Observable<boolean> | Promise<boolean> | boolean {
+  if (this.service.isLoggeedIn() !== true) {
+    this.router.navigate(['/login']);
   }
-  // otherwise redirect user to login page and return false
-  this.router.navigate(['/login']);
-
-  // console.log(state.url); // returns '/dashboard'
-  return false;
+  return true;
 }
 }

@@ -28,7 +28,6 @@ export class LoginComponent implements OnInit {
 // tslint:disable-next-line: typedef
 signIn(){
   this.auth.signIn(this.loginForm.value.email, this.loginForm.value.password);
-  
 }
 
 // tslint:disable-next-line: typedef

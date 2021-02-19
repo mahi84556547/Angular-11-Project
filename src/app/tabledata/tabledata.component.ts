@@ -36,7 +36,6 @@ export class TabledataComponent implements OnInit {
 
   // tslint:disable-next-line: typedef
   ngOnInit() {
-
     this.htts.getEmployees().subscribe(
       list => {
         const array = list.map(item => {

@@ -1,3 +1,4 @@
+import { LoggedinGuard } from './Guards/loggedin.guard';
 import { EmployeeComponent } from './employee/employee.component';
 import { SecurityGuard } from './Guards/security.guard';
 import { TabledataComponent } from './tabledata/tabledata.component';
@@ -9,9 +10,9 @@ import { RouterModule, Routes } from '@angular/router';
 
 
 const routes: Routes = [
-  {path: '',redirectTo: '/login',pathMatch: 'full'},
-  { path: 'login', component: LoginComponent },
-  { path: 'home', component: TabledataComponent,canActivate: [SecurityGuard] },
+  {path: '', redirectTo: '/login', pathMatch: 'full'},
+  { path: 'login', component: LoginComponent, canActivate: [LoggedinGuard]  },
+  { path: 'home', component: TabledataComponent, canActivate: [SecurityGuard] },
   { path: 'employee', component: EmployeeComponent, canActivate: [SecurityGuard] },
   { path: '**', component: PagenotfoundComponent},
 

@@ -48,9 +48,9 @@ logOut(){
   });
 }
 // tslint:disable-next-line: typedef
-  isLoggeedIn(){
-    const user = localStorage.getItem('user');
-    return user ? true : false;
+   isLoggeedIn(): boolean{
+   const user = localStorage.getItem('user');
+   return user ? true : false;
   }
 // tslint:disable-next-line: typedef
   getUser(){
